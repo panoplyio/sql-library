@@ -1,10 +1,10 @@
 # WordPress Posts
 
-| Name | `wordpress_posts`|
-|---|---|---|
-|Description|A concise view of published WordPress posts and their authors|
-|Usage|Master data related to WordPress posts. Great for aggregating metrics for analytics tools like Google Analytics|
-|Modifications|	To include or remove post types, modify the posts_type lists. Remove the post_status filter to include all draft versions of each posts (not recommended)|
+Name | `wordpress_posts`
+---|---
+Description| A concise view of published WordPress posts and their authors
+Usage| Master data related to WordPress posts. Great for aggregating metrics for analytics tools like Google Analytics
+Modifications| To include or remove post types, modify the posts_type lists. Remove the post_status filter to include all draft versions of each posts (not recommended)
 
 ```sql
 CREATE VIEW wordpress_posts AS (

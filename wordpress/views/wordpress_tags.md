@@ -1,10 +1,10 @@
 # WordPress Tags
 
-| Name | `wordpress_tags`|
-|---|---|---|
-|Description|A lookup table between wordpress posts and related posts tags|
-|Usage|A DRY way to avoid joining posts to tags over and over|
-|Modifications|	Could include term_group but it is barely supported by WordPress|
+Name | `wordpress_tags`
+---|---
+Description| A lookup table between wordpress posts and related posts tags
+Usage| A DRY way to avoid joining posts to tags over and over
+Modifications| Could include term_group but it is barely supported by WordPress
 
 ```sql
 CREATE VIEW wordpress_tags AS (
