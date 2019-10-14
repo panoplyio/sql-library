@@ -1,6 +1,6 @@
 # WordPress Posts
 
-Name | `wordpress_posts`
+View | `wordpress_posts`
 ---|---
 Description| A concise view of published WordPress posts and their authors
 Usage| Master data related to WordPress posts. Great for aggregating metrics for analytics tools like Google Analytics

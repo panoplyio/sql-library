@@ -1,6 +1,6 @@
 # WordPress Tags
 
-Name | `wordpress_tags`
+View | `wordpress_tags`
 ---|---
 Description| A lookup table between wordpress posts and related posts tags
 Usage| A DRY way to avoid joining posts to tags over and over
