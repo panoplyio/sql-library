@@ -23,4 +23,4 @@ For example:
 `queries` will probably fall into one of two buckets: "metrics," a single calculation like Customer Lifetime Value, and questions, eg. "What is the best day of the week to post on Instagram?”
 
 ## Markdown file templates
-views and queries files each have their own template. The main differences are: `views` files have the `CREATE VIEW` syntax commented out, if the view is to be saved directly in Panoply, or to be uncommented for use in other SQL workbenches. `views` files contain on example query that could be used with the view definition. And `queries` files contain a data dictionary of the columns that are returned by the query.
+`views` and `queries` files each have their own template. The main differences are: `views` files have the `CREATE VIEW` syntax commented out, if the view is to be saved directly in Panoply, or to be uncommented for use in other SQL workbenches. `views` files contain on example query that could be used with the view definition. And `queries` files contain a data dictionary of the columns that are returned by the query.
