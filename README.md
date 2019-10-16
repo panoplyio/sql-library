@@ -4,6 +4,18 @@ A collection of useful view definitions and SQL queries for Panoply Data Sources
 ## Directory structure
 Every Panoply data source should have its own directory in the top level of the repo. Each data source directory should have two subdirectories: `views` and `queries`.
 
+For example:
+```
+/
+    /salesforce
+        /views
+        /queries
+    /shopify
+        /views
+        /queries
+    /...
+```
+
 ### `/views`
 `views` are queries that perform significant ELT transformations and create tables to facilitate analysis and reporting. This will often be used to join and normalize tables that were created from nested JSON or create roll-up reporting tables that are easy for non-technical BI tool users to use with their BI tool of choice. Simply put: `views` are building blocks for queries.
 
