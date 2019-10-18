@@ -12,10 +12,9 @@ Usage| When and why to use this view
 Modifications| List ways this view could be modified for custom uses
 
 ```sql
-CREATE VIEW view_name AS (
+-- CREATE VIEW view_name AS
 SELECT *
 FROM some_table
-);
 ```
 
 ## Example: {Name of example}
