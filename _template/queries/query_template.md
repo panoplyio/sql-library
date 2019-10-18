@@ -1,3 +1,8 @@
+---
+layout: query
+title: {Name of Query}
+---
+
 # {Name of Query}
 
 Query | {Name of Query}

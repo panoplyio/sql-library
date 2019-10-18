@@ -1,3 +1,8 @@
+---
+layout: view
+title: {Name of View}
+---
+
 # {Name of View}
 
 View | `{view_name}`
