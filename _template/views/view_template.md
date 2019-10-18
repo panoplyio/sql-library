@@ -9,7 +9,7 @@ View | `{view_name}`
 ---|---
 Description| Brief summary transformation
 Usage| When and why to use this view
-Modifications| List ways this view could be modified for custom use
+Modifications| List ways this view could be modified for custom uses
 
 ```sql
 CREATE VIEW view_name AS (

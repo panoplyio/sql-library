@@ -1,11 +1,11 @@
 ---
 layout: query
-title: {Name of Query}
+title: {Name of View}
 ---
 
 # {Name of Query}
 
-Query | {Name of Query}
+Query | `{Name of Query}`
 ---|---
 Description| Brief summary of query
 Usage| When and why to use this query
