@@ -18,5 +18,5 @@ JOIN some_other_table ot ON t.email=ot.email
 ```sql
 SELECT *
 FROM view_name
-WHERE email NOT ilike '%gmail%';
+WHERE email not ilike '%gmail%';
 ```
