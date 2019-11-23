@@ -1,13 +1,13 @@
 # Hubspot Contacts Report
 
-View | `hubspot_contacts_report`
+Instructions | Details
 ---|---
 Description| Denormalized view of Hubspot's default values in `hubspot_contacts_properties` key-value pair table
 Usage| This is the "ready for analysis" view of Hubspot contacts
 Modifications| Properties can be removed or added. To add custom properties, refer to your Hubspot properties setting for their name. Dates are formatted as Unix timestamps so they must be transformed and cast into dates.
 
 ```sql
-CREATE VIEW view_name AS (
+-- CREATE VIEW hubspot_contacts_report AS
 SELECT 	
   -- CONTACT DETAILS --
 	p.hubspot_contacts_id,
@@ -55,7 +55,6 @@ SELECT
 FROM hubspot_contacts_properties p
 GROUP BY p.hubspot_contacts_id
 ORDER BY createdate DESC
-);
 ```
 
 ## Example: Contact creation by month
