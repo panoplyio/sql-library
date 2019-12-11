@@ -53,8 +53,7 @@ SELECT
 	max( CASE WHEN key = 'hs_analytics_average_page_views' THEN value END ) AS hs_analytics_average_page_views, -- Average Pageviews (number)
 	max( CASE WHEN key = 'hs_analytics_revenue' THEN value END ) AS hs_analytics_revenue -- Event Revenue (number)
 FROM hubspot_contacts_properties p
-GROUP BY p.hubspot_contacts_id
-ORDER BY createdate DESC;
+GROUP BY p.hubspot_contacts_id;
 ```
 
 ## Example: Contact creation by month
