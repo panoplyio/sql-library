@@ -82,7 +82,7 @@ SELECT
     max( CASE WHEN key = 'founded_year' THEN value END ) AS founded_year -- Year Founded (string)
 FROM hubspot_company_properties p
 GROUP BY p.hubspot_company_id
-ORDER BY createdate DESC
+ORDER BY createdate DESC;
 ```
 
 ## Example: Company creation by month
