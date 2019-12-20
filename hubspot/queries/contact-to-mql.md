@@ -34,7 +34,6 @@ FROM
     FROM
       hubspot_contacts_properties p
     GROUP BY 1
-    ORDER BY 3
   ) contact_dates
 WHERE
   createdate IS NOT NULL
