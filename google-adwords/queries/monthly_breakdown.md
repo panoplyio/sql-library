@@ -17,7 +17,7 @@ SELECT
   SUM(clicks :: float)/ SUM(impressions) clickthrough_rate,
   SUM(cost :: float / 1000000)/ SUM(clicks) cost_per_click
 FROM
-  adwords_adgroup_performance_report -- Table name might be different based on Schema and Destination settings in the data source
+  public.adwords_adgroup_performance_report -- Table name might be different based on Schema and Destination settings in the data source
 GROUP BY
   1,
   2
