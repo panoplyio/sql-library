@@ -10,7 +10,7 @@ Modifications | The table in the `FROM` might need to be changed based on Schema
 SELECT
   EXTRACT(YEAR FROM "day") "year",
   EXTRACT(MONTH FROM "day") "month",
-  ROUND(SUM(cost :: float / 1000000), 2) cost, -- divide cost by 1000000 to get Dollar since Google Provide Micro Dollar units
+  ROUND(SUM(cost :: float / 1000000), 2) cost, -- divide cost by 1000000 to get Dollar since Google Provide Micro Dollar units  - Link to Google Adwords Docs https://developers.google.com/adwords/api/docs/appendix/reports/adgroup-performance-report#cost
   SUM(conversions):: bigint conversions,
   SUM(clicks) clicks,
   SUM(impressions) impressions,
