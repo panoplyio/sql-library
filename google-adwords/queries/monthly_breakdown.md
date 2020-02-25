@@ -3,6 +3,7 @@
 Instructions | Details
 ---|---
 Description | This query sums the total cost and conversions by month and year from the `adgroup_performance_report`.
+Requirements | Collect the `Adgroup Performance Report` report with the Panoply Adwords API data source.
 Usage | This query can be used to create a line or bar chart of cost and conversions over time.
 Modifications | The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The columns `ad group` or `campaign` can be added to the `WHERE` as filters or to the `SELECT` and `GROUP BY` for an additional level of aggregation granularity.
 
