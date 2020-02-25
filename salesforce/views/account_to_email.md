@@ -14,13 +14,13 @@ WITH email_accountid AS (
     DISTINCT sfc.email,
     sfc.accountid
   FROM
-    salesforce_contact sfc
+    public.salesforce_contact sfc
   UNION
   SELECT
     DISTINCT sfl.email,
     sfl.convertedaccountid
   FROM
-    salesforce_lead sfl
+    public.salesforce_lead sfl
 )
 SELECT
   DISTINCT eaid.email,
@@ -28,7 +28,7 @@ SELECT
   sfa.name account_name
 FROM
   email_accountid eaid
-  LEFT JOIN salesforce_account sfa ON eaid.accountid = sfa.id
+  LEFT JOIN public.salesforce_account sfa ON eaid.accountid = sfa.id
 ```
 
 ## View Results Dictionary

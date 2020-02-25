@@ -19,10 +19,10 @@ SELECT
   sfo.closedate close_date,
   sfo.createddate created_date
 FROM
-  salesforce_opportunity sfo
-  JOIN salesforce_user sfu ON sfo.ownerid = sfu.id
-  LEFT JOIN salesforce_account sfa on sfa.id = sfo.accountid
-  LEFT JOIN salesforce_account_to_email sfae ON sfa.id = sfae.accountid
+  public.salesforce_opportunity sfo
+  JOIN public.salesforce_user sfu ON sfo.ownerid = sfu.id
+  LEFT JOIN public.salesforce_account sfa on sfa.id = sfo.accountid
+  LEFT JOIN public.salesforce_account_to_email sfae ON sfa.id = sfae.accountid
 WHERE
   sfo.closedate between '2020-01-01' AND '2020-03-31' -- Dates can be changed \ Filter can be removed
   AND sfo.stagename in ('Identified Need', 'Trial', 'Contract Sent', 'Verbal Commit') -- Stage Names can be changed \ Filter can be removed
