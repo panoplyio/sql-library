@@ -15,7 +15,7 @@ WITH email_accountid AS (
     sfc.accountid
   FROM
     public.salesforce_contact sfc
-  UNION
+  UNION -- Leads and Contacts are combined by UNION because they are mutually exclusive groups of individuals
   SELECT
     DISTINCT sfl.email,
     sfl.convertedaccountid
