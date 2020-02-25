@@ -3,7 +3,7 @@
 Instructions | Details
 ---|---
 Description | This query shows different details about opportunities derived from Salesforce data.
-Requirements | Collect the `Opportunity, User, Account, Contact, Lead` objects with the Panoply Salesforce data source and create the view `salesforce_account_to_email`, more details [here](https://github.com/panoplyio/sql-library/blob/master/salesforce/views/account_to_email.md).
+Requirements | Collect the `Opportunity`, `User`, `Account`, `Contact` and `Lead` objects with the Panoply Salesforce data source and create the view `salesforce_account_to_email`, more details [here](https://github.com/panoplyio/sql-library/blob/master/salesforce/views/account_to_email.md).
 Usage | This query can be displayed in a tabular form to display the current opportunities.
 Modifications | The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Filters for `closedate, stagename, probability` in the `WHERE` clause can be changed or completely removed.
 
