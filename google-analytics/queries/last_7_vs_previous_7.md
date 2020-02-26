@@ -35,6 +35,6 @@ ORDER BY
 ## Query Results Dictionary
 Column | Description
 ---|---
-`day_of_week`| Day of the week extracted from datehour, 0 = Sunday
+`day_of_week`| Day of the week extracted from datehour
 `last_7`| Values for last 7 days
 `previous_7`| Values for previous 7 days
