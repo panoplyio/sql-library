@@ -19,7 +19,7 @@ SELECT
     AND current_date - 8 THEN sessions END
   ) previous_7
 FROM
-  public."google-analytics"
+  public."google-analytics" -- Table name might be different based on Schema and Destination settings in the data source
 WHERE
   datehour BETWEEN current_date - 14
   AND current_date - 1

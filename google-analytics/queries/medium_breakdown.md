@@ -13,7 +13,7 @@ SELECT
   SUM(sessions) sum_sessions,
   SUM(bounces):: float / SUM(sessions) bounce_rate
 FROM
-  public."google-analytics"
+  public."google-analytics" -- Table name might be different based on Schema and Destination settings in the data source
 WHERE
   datehour > sysdate - 30 -- Value can be changed \ Filter can be removed
 GROUP BY
