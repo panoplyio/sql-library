@@ -20,6 +20,9 @@ SELECT
   ) previous_7
 FROM
   public."google-analytics"
+WHERE
+  datehour BETWEEN current_date - 14
+  AND current_date - 1
 GROUP BY
   1
 ORDER BY
