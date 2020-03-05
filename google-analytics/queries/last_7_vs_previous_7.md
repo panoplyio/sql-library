@@ -21,7 +21,7 @@ SELECT
 FROM
   public."google-analytics" -- Table name might be different based on Schema and Destination settings in the data source
 WHERE
-  datehour >= current_date - 15
+  datehour >= current_date - 14
   AND datehour < current_date
 GROUP BY
   1
