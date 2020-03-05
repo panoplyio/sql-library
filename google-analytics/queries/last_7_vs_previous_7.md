@@ -11,25 +11,25 @@ Modifications | The table in the `FROM` might need to be changed based on Schema
 SELECT
   TO_CHAR(datehour, 'Day') day_of_week,
   SUM(
-    CASE WHEN datehour BETWEEN current_date - 7
-    AND current_date - 1 THEN sessions END
+    CASE WHEN datehour >= current_date - 7
+    AND datehour < current_date THEN sessions END
   ) last_7,
   SUM(
-    CASE WHEN datehour BETWEEN current_date - 14
-    AND current_date - 8 THEN sessions END
+    CASE WHEN datehour >= current_date - 14
+    AND datehour < current_date - 7 THEN sessions END
   ) previous_7
 FROM
   public."google-analytics" -- Table name might be different based on Schema and Destination settings in the data source
 WHERE
-  datehour BETWEEN current_date - 14
-  AND current_date - 1
+  datehour >= current_date - 14
+  AND datehour < current_date
 GROUP BY
   1
 ORDER BY
   MIN(
     CASE WHEN datehour BETWEEN current_date - 7
     AND current_date - 1 THEN datehour END
-  ) DESC
+  ) ASC
 ```
 
 ## Query Results Dictionary
