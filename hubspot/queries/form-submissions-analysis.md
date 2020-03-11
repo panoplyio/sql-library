@@ -10,7 +10,7 @@ Modifications | Remove the dimensions of the query to aggregate the metrics at a
 WITH form_submissions
 AS (
   SELECT s."conversion-id" submission_id,
-    TIMESTAMP 'epoch' + s.TIMESTAMP / 1000 * interval '1 second' submission_timestamp,
+    TIMESTAMP 'epoch' + s.TIMESTAMP / 1000 * INTERVAL '1 second' submission_timestamp,
     row_number() OVER (
       PARTITION BY s.hubspot_contacts_id ORDER BY s.TIMESTAMP
       ) submission_order,
@@ -30,7 +30,7 @@ SELECT f.guid form_id,
   count(DISTINCT fs.submission_id) total_submissions,
   count(DISTINCT fs.hubspot_contacts_id) total_contacts,
   count(DISTINCT CASE WHEN submission_order = 1 THEN fs.submission_id END) first_submissions,
-  round(total_submissions::float / total_contacts, 2) submission_per_contact
+  round(total_submissions::FLOAT / total_contacts, 2) submission_per_contact
 FROM hubspot_forms f
 JOIN form_submissions fs ON fs.form_id = f.guid
 WHERE submission_timestamp > CURRENT_DATE - 28
