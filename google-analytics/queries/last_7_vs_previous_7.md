@@ -1,4 +1,4 @@
-# ﻿Last 7 VS Previous 7
+# ﻿Google Analytics - Last 7 VS Previous 7
 
 Instructions | Details
 ---|---
