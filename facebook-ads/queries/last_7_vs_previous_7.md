@@ -4,7 +4,7 @@ Instructions | Details
 ---|---
 Description | This query compares the sessions of the last 7 days to the previous 7 days aggregated by `campaign_name`. This query demonstrates the use of a concept that can be used with any dimension and metric\\s, comparing different values of the metric based on different values of time or a given dimension.
 Requirements | Collect data with the Panoply Facebook Ads data source.
-Usage | This query can be used to create a bar chart comparing the `last_7` and `previous_7` for each day of the week.
+Usage | This query can be used to create a bar chart comparing the `last_7` and `previous_7` for each campaign or simply displayed as a table.
 Modifications | The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. Other dimensions and metrics can be added as filters to the `WHERE` or by adding a `HAVING` clause and other aggregations can be added on top of `last_7` and `previous_7`. This query sums the metric `clicks`, this can be changed to a different metric like `spend` or `impressions`.
 
 ```sql
