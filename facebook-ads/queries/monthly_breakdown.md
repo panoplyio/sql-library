@@ -31,7 +31,7 @@ Column | Description
 ---|---
 `year`| Year extracted from the date_start column
 `month`| Month extracted from the date_start column
-`cost`| Total monthly cost in Dollars
+`cost`| Total monthly cost in the ad account's chosen currency
 `clicks`| Total monthly clicks
 `impressions`| Total monthly impressions
 `clickthrough_rate`| Monthly clicks divided by monthly impressions
