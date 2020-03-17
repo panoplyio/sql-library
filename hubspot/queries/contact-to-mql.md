@@ -1,4 +1,4 @@
-# ﻿Time elapsed histogram: From contact create date to MQL conversion
+# Hubspot - ﻿Time elapsed histogram: From contact create date to MQL conversion
 
 Instructions | Details
 ---|---

@@ -1,4 +1,4 @@
-# ﻿Monthly Breakdown
+# ﻿Google Adwords - Monthly Breakdown
 
 Instructions | Details
 ---|---
@@ -9,8 +9,7 @@ Modifications | The table in the `FROM` might need to be changed based on Schema
 
 ```sql
 SELECT
-  EXTRACT(YEAR FROM "day") "year",
-  EXTRACT(MONTH FROM "day") "month",
+  DATE_TRUNC('month', "day") :: date year_month,
   ROUND(SUM(cost :: float / 1000000), 2) cost, -- divide cost by 1000000 to get Dollar since Google Provide Micro Dollar units  - Link to Google Adwords Docs https://developers.google.com/adwords/api/docs/appendix/reports/adgroup-performance-report#cost
   SUM(conversions):: bigint conversions,
   SUM(clicks) clicks,
@@ -20,18 +19,15 @@ SELECT
 FROM
   public.adwords_adgroup_performance_report -- Table name might be different based on Schema and Destination settings in the data source
 GROUP BY
-  1,
-  2
+  1
 ORDER BY
-  1 ASC,
-  2 ASC
+  1 ASC
 ```
 
 ## Query Results Dictionary
 Column | Description
 ---|---
-`year`| Year extracted from the day column
-`month`| Month extracted from the day column
+`year_month`| Year and month extracted from the day column. Values are in date format with the first day of each month to represent that given month.
 `cost`| Total monthly cost in Dollars
 `conversions`| Total monthly conversions
 `clicks`| Total monthly clicks

@@ -1,4 +1,4 @@
-# Hubspot Contacts Report
+# Hubspot - Contacts Report
 
 Instructions | Details
 ---|---

@@ -1,10 +1,10 @@
-# ﻿Last 7 VS Previous 7
+# ﻿Google Analytics - Last 7 VS Previous 7
 
 Instructions | Details
 ---|---
 Description | This query compares the sessions of the last 7 days to the previous 7 days aggregated by day. This query demonstrates the use of a concept that can be used with any dimension and metric\\s, comparing different values of the metric based on different values of the dimension.
 Requirements | Collect any set of metrics and dimensions with at least one date or timestamp field with the Panoply Google Analytics data source. This example uses the `datehour` dimension for the date field but it could also use `date`, or `datehourminute`. This example also requires the `sessions` metric.
-Usage | This query can be used to create a bar chart comparing the `last_7` abd `previous_7` for each day of the week.
+Usage | This query can be used to create a bar chart comparing the `last_7` and `previous_7` for each day of the week.
 Modifications | The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. Other dimensions and metrics can be added to the `WHERE` as filters and other aggregations can be added on top of `last_7` and `previous_7`.
 
 ```sql

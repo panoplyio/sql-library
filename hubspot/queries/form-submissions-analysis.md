@@ -1,4 +1,4 @@
-# ﻿Hubspot Form Submission Analysis
+# Hubspot - Form Submission Analysis
 
 Instructions | Details
 ---|---

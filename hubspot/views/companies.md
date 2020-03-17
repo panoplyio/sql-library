@@ -1,4 +1,4 @@
-# Hubspot Companies Report
+# Hubspot - Companies Report
 
 Instructions | Details
 ---|---
