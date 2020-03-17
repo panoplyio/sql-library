@@ -9,8 +9,7 @@ Modifications | The table in the `FROM` might need to be changed based on Schema
 
 ```sql
 SELECT
-  EXTRACT(YEAR FROM date_start) "year",
-  EXTRACT(MONTH FROM date_start) "month",
+  DATE_TRUNC('month', date_start) :: date year_month,
   ROUND(SUM(spend), 2) cost,
   SUM(clicks) clicks,
   SUM(impressions) impressions,
@@ -19,18 +18,15 @@ SELECT
 FROM
   public."facebook-ads" -- Table name might be different based on Schema and Destination settings in the data source
 GROUP BY
-  1,
-  2
+  1
 ORDER BY
-  1 ASC,
-  2 ASC
+  1 ASC
 ```
 
 ## Query Results Dictionary
 Column | Description
 ---|---
-`year`| Year extracted from the date_start column
-`month`| Month extracted from the date_start column
+`year_month`| Year and month extracted from the date_start column. Values are in date format with the first day of each month to represent that given month.
 `cost`| Total monthly cost in the ad account's chosen currency
 `clicks`| Total monthly clicks
 `impressions`| Total monthly impressions
