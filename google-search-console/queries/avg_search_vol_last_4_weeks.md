@@ -11,7 +11,7 @@ Modifications | <ul> <li><b>Change date range:</b> In the WHERE clause, change `
 SELECT 
     TO_CHAR(date, 'ID') AS day_number,
     TO_CHAR(date, 'Day') AS day_of_week,
-    SUM(clicks/impressions) AS avg_search_vol
+    AVG(clicks*1.00/impressions) AS avg_search_vol
 FROM google_search_console_blog 
 WHERE date >= current_date - interval '4 weeks' 
 GROUP BY 
