@@ -1,11 +1,12 @@
-# Hubspot - Form Submission Analysis
+---
+title: Hubspot - Form Submission Analysis
+description: This query calculates metrics about form submissions and the context of the form submissions. This data is pulled from the [Hubspot API into Panoply](https://panoply.io/docs/data-sources/hubspot/).
+usage: This query can be used to create a bar chart that identifies the most commonly submitted Hubspot forms. Further modification could allow you to analyze the form submission over time, or the sequence of form submissions for each contact.
+modifications: Remove the dimensions of the query to aggregate the metrics at a higher level. For instance, if one form can be submitted on multiple pages, removing the `page_url` and `page_title` dimensions would provide _form-level_ metrics only. Modify the `submission_timestamp` comparison in the `WHERE` clause to change the time frame of the analysis.
+---
 
-Instructions | Details
----|---
-Description | This query calculates metrics about form submissions and the context of the form submissions. This data is pulled from the [Hubspot API into Panoply](https://panoply.io/docs/data-sources/hubspot/).
-Usage | This query can be used to create a bar chart that identifies the most commonly submitted Hubspot forms. Further modification could allow you to analyze the form submission over time, or the sequence of form submissions for each contact.
-Modifications | Remove the dimensions of the query to aggregate the metrics at a higher level. For instance, if one form can be submitted on multiple pages, removing the `page_url` and `page_title` dimensions would provide _form-level_ metrics only. Modify the `submission_timestamp` comparison in the `WHERE` clause to change the time frame of the analysis.
-
+# Hubspot - Form Submission Analysi
+s
 ```sql
 WITH form_submissions
 AS (

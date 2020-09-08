@@ -1,11 +1,12 @@
-# Google Analytics - Medium Breakdown
+---
+title: Google Analytics - Medium Breakdown
+description: This displays a sessions and bounce rate from the past 30 days aggregated by medium.
+requirements: Collect the Panoply Google Analytics data source with the default set of metrics and dimensions. Dimensions used: `medium` and `datehour`. Metrics used: `sessions` and `bounces`
+usage: The result of this query can be displayed as a table or also as a bar chart.
+modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The columns `country` or `devicecategory` can be added to the `WHERE` as filters or to the `SELECT` and `GROUP BY` for an additional level of aggregation granularity.
+---
 
-Instructions | Details
----|---
-Description | This displays a sessions and bounce rate from the past 30 days aggregated by medium.
-Requirements | Collect the Panoply Google Analytics data source with the default set of metrics and dimensions. Dimensions used: `medium` and `datehour`. Metrics used: `sessions` and `bounces`
-Usage | The result of this query can be displayed as a table or also as a bar chart.
-Modifications | The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The columns `country` or `devicecategory` can be added to the `WHERE` as filters or to the `SELECT` and `GROUP BY` for an additional level of aggregation granularity.
+# Google Analytics - Medium Breakdown
 
 ```sql
 SELECT
