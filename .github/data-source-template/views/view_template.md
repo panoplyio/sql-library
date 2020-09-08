@@ -16,7 +16,7 @@ JOIN some_other_table ot ON t.email=ot.email
 ## Example: {Name of example}
 
 ```sql
-SELECT *
+SELECT * 
 FROM view_name
 WHERE email not ilike '%gmail%';
 ```
