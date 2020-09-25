@@ -1,4 +1,4 @@
---
+---
 title: Facebook Ads - Monthly Breakdown
 description: This query sums the total cost, clicks and impressions by month and year from `facebook-ads`.
 requirements: Collect data with the Panoply Facebook Ads data source.
