@@ -12,11 +12,11 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 SELECT
   "type",
   SUM("amount") AS "amount",
-  count(*) AS "opps"
+  COUNT(*) AS "opps"
 FROM
   public.salesforce_opportunity
 WHERE
-  EXTRACT(quarter FROM "closedate") = EXTRACT(quarter FROM CURRENT_DATE)
+  date_trunc('quarter', "closedate") = date_trunc('quarter', CURRENT_DATE)
   AND stagename = 'Closed Won'
 GROUP BY
   1
@@ -24,7 +24,7 @@ UNION ALL
 SELECT
   'Total' AS "type",
   SUM("amount") AS "amount",
-  count(*) AS "opps"
+  COUNT(*) AS "opps"
 FROM
   public.salesforce_opportunity
 WHERE
