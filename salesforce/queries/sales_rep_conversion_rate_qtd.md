@@ -10,44 +10,46 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 
 ```sql
 WITH active_user AS (
-    SELECT 
-        id, email, firstname || ' ' || lastname AS rep
-    FROM 
-        public.salesforce_user
-    WHERE 
-        salesforce_user.IsActive = 1
+  SELECT
+    id, email, firstname || ' ' || lastname AS rep
+  FROM
+    public.salesforce_user
+  WHERE
+    salesforce_user.IsActive = 1
 ),
 converted_and_won AS (
-    SELECT 
-        sl.ownerid,
-        COUNT(*) AS total_leads,
-        COUNT(CASE WHEN sl.convertedopportunityid IS NOT NULL THEN 1 END) AS converted_leads,
-        COUNT(CASE WHEN so.stagename = 'Closed Won' THEN 1 END) AS won_leads,
-        ROUND(converted_leads * 100.0 / total_leads, 2) AS conversion_rate,
-        ROUND(won_leads * 100.0 / total_leads, 2) AS win_rate
-    FROM 
-        public.salesforce_lead sl
-    LEFT JOIN
-        public.salesforce_opportunity so
-      ON sl.convertedopportunityid = so.id
-    WHERE
-        EXTRACT(quarter FROM sl."createddate") = EXTRACT(quarter FROM CURRENT_DATE)
-    GROUP BY 1
+  SELECT
+    sl.ownerid,
+    COUNT(*) AS "total_leads",
+    COUNT(CASE WHEN sl.convertedopportunityid IS NOT NULL THEN 1 END) AS "converted_leads",
+    COUNT(CASE WHEN so.stagename = 'Closed Won' THEN 1 END) AS "won_leads",
+    ROUND(converted_leads * 100.0 / total_leads, 2) AS "conversion_rate",
+    ROUND(won_leads * 100.0 / total_leads, 2) AS "win_rate"
+  FROM
+    public.salesforce_lead sl
+  LEFT JOIN
+    public.salesforce_opportunity so
+    ON sl.convertedopportunityid = so.id
+  WHERE
+    date_trunc('quarter', sl."createddate") = date_trunc('quarter', CURRENT_DATE)
+  GROUP BY
+    1
 )
 SELECT
-    au.rep AS sales_rep,
-    au.email,
-    srl.total_leads,
-    srl.converted_leads,
-    srl.won_leads,
-    srl.conversion_rate,
-    srl.win_rate
-FROM 
-    converted_and_won srl
-JOIN 
-    active_user au
+  au.rep AS "sales_rep",
+  au.email,
+  srl.total_leads,
+  srl.converted_leads,
+  srl.won_leads,
+  srl.conversion_rate,
+  srl.win_rate
+FROM
+  converted_and_won srl
+JOIN
+  active_user au
   ON srl.ownerid = au.id
-ORDER BY total_leads desc
+ORDER BY
+  total_leads desc
 ```
 
 ## Query Results Dictionary
