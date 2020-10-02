@@ -1,7 +1,7 @@
 ---
 title: Zendesk & Salesforce: Ticket count by status per paying-existing customers for the Quarter-To-Date (QTD).
 description: This query shows how many zendesk tickets per status a paying customer has. Paying customers are derived from Salesforce data and the ticket count is derived from the Zendesk data. User data from the two datasources are linked by email.
-requirements: Collect the `Lead` and `Opportunity` objects with the Panoply Salesforce data source and also the `Users` and `Organizations` Resources form the Zendesk data source.
+requirements: Collect the `Lead` and `Opportunity` objects with the Panoply Salesforce data source and also the `Users`, `Organizations`, and `Tickets` Resources form the Zendesk data source.
 usage: This query can be displayed in a tabular or pivot form to display the ticket count per status.
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Date Range Filter using the `created_at` in the `WHERE` clause can be changed.
 ---
@@ -48,7 +48,7 @@ SELECT
   COUNT(CASE WHEN zt."status" = 'closed' THEN 1 END) AS "closed",
   COUNT(*) AS "total"
 from
-  zendesk_tickets zt
+  public.zendesk_tickets zt
 JOIN
   users u
   ON zt."submitter_id" = u."id"
@@ -72,3 +72,4 @@ Column | Description
 `hold`| Zendesk tickets count under the "hold" status
 `solved`| Zendesk tickets count under the "solved" status
 `closed`| Zendesk tickets count under the "closed" status
+`total`| Total tickets count
