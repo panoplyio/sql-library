@@ -10,23 +10,30 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 
 ```sql
 WITH salesforce_user AS (
-    SELECT id, email, firstname || ' ' || lastname as rep
-    FROM public.salesforce_user
-    WHERE salesforce_user.IsActive
+  SELECT
+    id, email, firstname || ' ' || lastname AS "rep"
+  FROM
+    public.salesforce_user
+  WHERE
+    salesforce_user.IsActive
 )
 SELECT
-  us.rep as sales_rep,
+  us.rep AS "sales_rep",
   us.email,
-  sum(op.amount) as revenue
-FROM 
-    public.salesforce_opportunity op
-JOIN 
-    salesforce_user us
+  sum(op.amount) AS "revenue"
+FROM
+  public.salesforce_opportunity op
+JOIN
+  salesforce_user us
   ON op.ownerid = us.id
-WHERE op.stagename = 'Closed Won'
-  AND date_trunc('quarter',closedate) = date_trunc('quarter',current_date)
-GROUP BY 1,2
-ORDER BY revenue DESC
+WHERE
+  op.stagename = 'Closed Won'
+  AND DATE_TRUNC('quarter', "closedate") = DATE_TRUNC('quarter', current_date)
+GROUP BY
+  1,
+  2
+ORDER BY
+  revenue DESC
 ```
 
 ## Query Results Dictionary
