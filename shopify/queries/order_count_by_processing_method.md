@@ -10,21 +10,23 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 
 ```sql
 SELECT
-    so.processing_method,
-    COUNT(CASE WHEN so.financial_status = 'pending' THEN 1 END) AS "pending",
-    COUNT(CASE WHEN so.financial_status = 'authorized' THEN 1 END) AS "authorized",
-    COUNT(CASE WHEN so.financial_status = 'partially_paid' THEN 1 END) AS "partially_paid",
-    COUNT(CASE WHEN so.financial_status = 'paid' THEN 1 END) AS "paid",
-    COUNT(CASE WHEN so.financial_status = 'partially_refunded' THEN 1 END) AS "partially_refunded",
-    COUNT(CASE WHEN so.financial_status = 'refunded' THEN 1 END) AS "refunded",
-    COUNT(CASE WHEN so.financial_status = 'voided' THEN 1 END) AS "voided",
-    COUNT(*) AS total_orders
+  so.processing_method,
+  COUNT(CASE WHEN so.financial_status = 'pending' THEN 1 END) AS "pending",
+  COUNT(CASE WHEN so.financial_status = 'authorized' THEN 1 END) AS "authorized",
+  COUNT(CASE WHEN so.financial_status = 'partially_paid' THEN 1 END) AS "partially_paid",
+  COUNT(CASE WHEN so.financial_status = 'paid' THEN 1 END) AS "paid",
+  COUNT(CASE WHEN so.financial_status = 'partially_refunded' THEN 1 END) AS "partially_refunded",
+  COUNT(CASE WHEN so.financial_status = 'refunded' THEN 1 END) AS "refunded",
+  COUNT(CASE WHEN so.financial_status = 'voided' THEN 1 END) AS "voided",
+  COUNT(*) AS total_orders
 FROM
-    public.shopify_orders so
+  public.shopify_orders so
 WHERE
-    EXTRACT(quarter FROM so."created_at") = EXTRACT(quarter FROM CURRENT_DATE)
-GROUP BY 1
-ORDER BY total_orders DESC
+  EXTRACT(quarter FROM so."created_at") = EXTRACT(quarter FROM CURRENT_DATE)
+GROUP BY
+  1
+ORDER BY
+  total_orders DESC
 ```
 
 ## Query Results Dictionary
