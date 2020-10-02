@@ -11,24 +11,26 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 
 ```sql
 SELECT
-    "type",
-    SUM("amount") as "amount"
+  "type",
+  SUM("amount") as "amount"
 FROM
-    public.salesforce_opportunity
+  public.salesforce_opportunity
 WHERE
-    EXTRACT(quarter FROM "closedate") = EXTRACT(quarter FROM CURRENT_DATE)
+  EXTRACT(quarter FROM "closedate") = EXTRACT(quarter FROM CURRENT_DATE)
   AND stagename = 'Closed Won'
-GROUP BY 1
+GROUP BY
+  1
 UNION ALL
 SELECT
-    'TOTAL AMOUNT:' as "type",
-    SUM("amount") as amount
+  'TOTAL AMOUNT:' as "type",
+  SUM("amount") as "amount"
 FROM
-    public.salesforce_opportunity
+  public.salesforce_opportunity
 WHERE
-    EXTRACT(quarter FROM "closedate") = EXTRACT(quarter FROM CURRENT_DATE)
+  EXTRACT(quarter FROM "closedate") = EXTRACT(quarter FROM CURRENT_DATE)
   AND stagename = 'Closed Won'
-order by amount
+ORDER BY
+  amount
 ```
 
 ## Query Results Dictionary
