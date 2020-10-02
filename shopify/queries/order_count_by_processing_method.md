@@ -22,7 +22,7 @@ SELECT
 FROM
   public.shopify_orders so
 WHERE
-  EXTRACT(quarter FROM so."created_at") = EXTRACT(quarter FROM CURRENT_DATE)
+  date_trunc('quarter', so."created_at") = date_trunc('quarter', CURRENT_DATE)
 GROUP BY
   1
 ORDER BY
