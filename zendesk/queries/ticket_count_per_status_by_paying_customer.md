@@ -10,51 +10,55 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 
 ```sql
 WITH paying_users AS (
-    SELECT
-        DISTINCT sfl."email"
-    FROM
-        public.salesforce_lead sfl
-    JOIN
-        public.salesforce_opportunity sfo
-      ON sfl."convertedopportunityid" = sfo."id"
-    WHERE sfo.stagename = 'Closed Won'
+  SELECT
+    DISTINCT sfl."email"
+  FROM
+    public.salesforce_lead sfl
+  JOIN
+    public.salesforce_opportunity sfo
+    ON sfl."convertedopportunityid" = sfo."id"
+  WHERE sfo.stagename = 'Closed Won'
 ),
 users AS (
-    SELECT
-        zu."id",
-        zu."name",
-        zu."email",
-        CASE
-            WHEN zo."name" IS NULL THEN zu."email"
-            ELSE zo."name"
-        END AS requester
-    FROM public.zendesk_users zu
-    LEFT JOIN
-        public.zendesk_organizations zo
-      ON zu."organization_id" = zo."id"
-    JOIN
-        public.paying_users apu
-      ON apzu."email" = zu."email"
+  SELECT
+    zu."id",
+    zu."name",
+    zu."email",
+    CASE
+      WHEN zo."name" IS NULL THEN zu."email"
+      ELSE zo."name"
+    END AS requester
+  FROM
+    public.zendesk_users zu
+  LEFT JOIN
+    public.zendesk_organizations zo
+    ON zu."organization_id" = zo."id"
+  JOIN
+    public.paying_users apu
+    ON apzu."email" = zu."email"
 )
-select
-    u."name",
-    u."requester",
-    COUNT(CASE WHEN zt."status" = 'new' THEN 1 END) AS "new",
-    COUNT(CASE WHEN zt."status" = 'open' THEN 1 END) AS "open",
-    COUNT(CASE WHEN zt."status" = 'pending' THEN 1 END) AS "pending",
-    COUNT(CASE WHEN zt."status" = 'hold' THEN 1 END) AS "hold",
-    COUNT(CASE WHEN zt."status" = 'solved' THEN 1 END) AS "solved",
-    COUNT(CASE WHEN zt."status" = 'closed' THEN 1 END) AS "closed",
-    COUNT(*) AS "total"
+SELECT
+  u."name",
+  u."requester",
+  COUNT(CASE WHEN zt."status" = 'new' THEN 1 END) AS "new",
+  COUNT(CASE WHEN zt."status" = 'open' THEN 1 END) AS "open",
+  COUNT(CASE WHEN zt."status" = 'pending' THEN 1 END) AS "pending",
+  COUNT(CASE WHEN zt."status" = 'hold' THEN 1 END) AS "hold",
+  COUNT(CASE WHEN zt."status" = 'solved' THEN 1 END) AS "solved",
+  COUNT(CASE WHEN zt."status" = 'closed' THEN 1 END) AS "closed",
+  COUNT(*) AS "total"
 from
-    zendesk_tickets zt
+  zendesk_tickets zt
 JOIN
-    users u
+  users u
   ON zt."submitter_id" = u."id"
 WHERE
-    EXTRACT(quarter FROM zt."created_at") = EXTRACT(quarter FROM CURRENT_DATE)
-GROUP BY 1,2
-ORDER BY 9 DESC
+  DATE_TRUNC('quarter', zt."created_at") = DATE_TRUNC('quarter', CURRENT_DATE)
+GROUP BY
+  1,
+  2
+ORDER BY
+  total DESC
 ```
 
 ## Query Results Dictionary
