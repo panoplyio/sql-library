@@ -3,8 +3,7 @@ title: Salesforce: All revenue and loss for the Quarter-To-Date (QTD) grouped by
 description: This query sums the total amount from opportunities grouped by type. A total is displayed at the bottom
 requirements: Collect the `Opportunities` Resource with the Panoply Salesforce data source.
 usage: This query can be displayed in a pivot form to display the total amount per opportunity type.
-
-modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Date Range Filter using the `closedate` in the `WHERE` clause can be changed.
+modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Date Range Filter using the `closedate` in the `WHERE` clause can be changed. Everything below the UNION ALL clause can also be removed if you prefer to not have the total at the bottom.
 ---
 
 # Salesforce: All revenue and loss for the Quarter-To-Date (QTD) grouped by type of opportunity.
@@ -12,7 +11,8 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 ```sql
 SELECT
   "type",
-  SUM("amount") as "amount"
+  SUM("amount") AS "amount",
+  count(*) AS "opps"
 FROM
   public.salesforce_opportunity
 WHERE
@@ -22,12 +22,13 @@ GROUP BY
   1
 UNION ALL
 SELECT
-  'TOTAL AMOUNT:' as "type",
-  SUM("amount") as "amount"
+  'Total' AS "type",
+  SUM("amount") AS "amount",
+  count(*) AS "opps"
 FROM
   public.salesforce_opportunity
 WHERE
-  EXTRACT(quarter FROM "closedate") = EXTRACT(quarter FROM CURRENT_DATE)
+  date_trunc('quarter', "closedate") = date_trunc('quarter', CURRENT_DATE)
   AND stagename = 'Closed Won'
 ORDER BY
   amount
@@ -38,3 +39,4 @@ Column | Description
 ---|---
 `type`| Opportunity type
 `amount`| Sum of the opportunity amount
+`opps`| Opportunity count
