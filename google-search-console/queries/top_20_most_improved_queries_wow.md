@@ -9,28 +9,28 @@ Modifications | <ul><li><b>Custom date range:</b> In all `WHERE` clauses, change
 
 ```sql
 SELECT 
-	last7.query AS query,
-	last7.avg_pos AS last_7_avg_pos,
-	prev7.avg_pos AS prev_7_avg_pos,
-	prev7.avg_pos - last7.avg_pos AS difference
+	this_week.query AS query,
+	this_week.avg_pos AS this_week_avg_pos,
+	last_week.avg_pos AS last_week_avg_pos,
+	last_week.avg_pos - this_week.avg_pos AS difference
 FROM
   (SELECT
     query,
     SUM(position * impressions) / SUM(impressions) AS avg_pos
    FROM google_search_console_blog 
-   WHERE date < current_date -- This is the 'last 7' days
+   WHERE date < current_date
      AND date >= current_date - interval '7 days'
-   GROUP BY query) AS last7
+   GROUP BY query) AS this_week
 INNER JOIN
   (SELECT 
     query,
     SUM(position * impressions) / SUM(impressions) AS avg_pos
    FROM google_search_console_blog 
 
-   WHERE date < current_date - interval '7 days' -- This is the 'previous 7' days
+   WHERE date < current_date - interval '7 days'
      AND date >= current_date - interval '14 days'
-   GROUP BY query) AS prev7
-  ON last7.query = prev7.query
+   GROUP BY query) AS last_week
+  ON this_week.query = last_week.query
 ORDER BY difference DESC LIMIT 20;
 ```
 
@@ -38,6 +38,6 @@ ORDER BY difference DESC LIMIT 20;
 Column | Description
 ---|---
 `query`| The search term typed into Google that your page(s) have ranked for.
-`last_7_avg_pos`| The average position for that query over the last seven days.
-`prev_7_avg_pos`| The average position for that query over the previous seven days.
-`difference`| The change in average position week on week. A positive number means an increase in position and that the query ranks closer to #1. For example, if a page ranked #40 in the previous week and #5 last week, the difference is 40 - 5 = 35. Thus the page has increased its position by 35.
+`this_week_avg_pos`| The average position for that query this week.
+`last_week_avg_pos`| The average position for that query last week.
+`difference`| The change in average position week on week. A positive number means an increase in position and that the query ranks closer to #1. For example, if a page ranked #40 last week and #5 this week, the difference is 40 - 5 = 35. Thus the page has increased its position by 35.
