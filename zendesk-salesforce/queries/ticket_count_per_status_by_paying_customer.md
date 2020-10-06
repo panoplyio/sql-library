@@ -47,7 +47,7 @@ SELECT
   COUNT(CASE WHEN zt."status" = 'solved' THEN 1 END) AS "solved",
   COUNT(CASE WHEN zt."status" = 'closed' THEN 1 END) AS "closed",
   COUNT(*) AS "total"
-from
+FROM
   public.zendesk_tickets zt
 JOIN
   users u
