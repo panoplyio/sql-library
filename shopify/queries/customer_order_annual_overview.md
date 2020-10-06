@@ -10,7 +10,7 @@ modifications: The table in the `FROM` might need to be changed based on Schema 
 
 ```sql
 SELECT
-  soc.first_name || ' ' || soc.last_name as "customer",
+  soc.first_name || ' ' || soc.last_name AS "customer",
   soc.email,
   SUM(so.total_discounts) AS "total_discounts",
   LISTAGG(distinct sodc.code, ', ') AS "discount_codes",
@@ -37,7 +37,7 @@ LEFT JOIN
   public.shopify_orders_discount_codes sodc
   ON sodc.shopify_orders_id = so.id
 WHERE
-  date_trunc('year', so."created_at") = date_trunc('year', CURRENT_DATE)
+  DATE_TRUNC('year', so."created_at") = DATE_TRUNC('year', CURRENT_DATE)
   AND customer IS NOT NULL
   AND soc.email IS NOT NULL
 GROUP BY

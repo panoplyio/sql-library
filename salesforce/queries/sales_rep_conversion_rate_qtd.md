@@ -31,7 +31,7 @@ converted_and_won AS (
     public.salesforce_opportunity so
     ON sl.convertedopportunityid = so.id
   WHERE
-    date_trunc('quarter', sl."createddate") = date_trunc('quarter', CURRENT_DATE)
+    DATE_TRUNC('quarter', sl."createddate") = DATE_TRUNC('quarter', CURRENT_DATE)
   GROUP BY
     1
 )
