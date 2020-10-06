@@ -9,7 +9,7 @@ Modifications | <ul><li><b>Custom date range:</b> In all `WHERE` clauses, change
 
 ```sql
 SELECT 
-  this_week.query,
+  this_week.query AS query,
   this_week.avg_pos AS this_week_avg_pos,
   last_week.avg_pos AS last_week_avg_pos,
   last_week.avg_pos - this_week.avg_pos AS difference
