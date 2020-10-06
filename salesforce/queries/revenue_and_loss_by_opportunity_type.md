@@ -16,7 +16,7 @@ SELECT
 FROM
   public.salesforce_opportunity
 WHERE
-  date_trunc('quarter', "closedate") = date_trunc('quarter', CURRENT_DATE)
+  DATE_TRUNC('quarter', "closedate") = DATE_TRUNC('quarter', CURRENT_DATE)
   AND stagename = 'Closed Won'
 GROUP BY
   1
@@ -28,7 +28,7 @@ SELECT
 FROM
   public.salesforce_opportunity
 WHERE
-  date_trunc('quarter', "closedate") = date_trunc('quarter', CURRENT_DATE)
+  DATE_TRUNC('quarter', "closedate") = DATE_TRUNC('quarter', CURRENT_DATE)
   AND stagename = 'Closed Won'
 ORDER BY
   amount
