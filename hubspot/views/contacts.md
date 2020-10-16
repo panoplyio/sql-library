@@ -5,8 +5,6 @@ usage: This is the "ready for analysis" view of Hubspot contacts
 modifications: Properties can be removed or added. To add custom properties, refer to your Hubspot properties setting for their name. Dates are formatted as Unix timestamps so they must be transformed and cast into dates.
 ---
 
-# Hubspot - Contacts Report
-
 ```sql
 -- CREATE VIEW hubspot_contacts_report AS
 SELECT 	

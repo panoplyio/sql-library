@@ -6,8 +6,6 @@ usage: This query can be used to create a line or bar chart of cost and conversi
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The columns `ad group` or `campaign` can be added to the `WHERE` as filters or to the `SELECT` and `GROUP BY` for an additional level of aggregation granularity.
 ---
 
-# Google Adwords - Monthly Breakdown
-
 ```sql
 SELECT
   DATE_TRUNC('month', "day") :: date year_month,

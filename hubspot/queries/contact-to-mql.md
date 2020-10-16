@@ -5,8 +5,6 @@ usage: This query can be used to create histogram of time elapsed between the cr
 modifications: Change the bin size by altering BETWEEN integers (Ex. BETWEEN 1 AND 6) and the associated column names (in single quotes after THEN).
 ---
 
-# Hubspot - Time elapsed histogram: From contact create date to MQL conversion
-
 ```sql
 SELECT
   CASE WHEN DATEDIFF(

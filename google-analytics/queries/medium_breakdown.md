@@ -6,8 +6,6 @@ usage: The result of this query can be displayed as a table or also as a bar cha
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The columns `country` or `devicecategory` can be added to the `WHERE` as filters or to the `SELECT` and `GROUP BY` for an additional level of aggregation granularity.
 ---
 
-# Google Analytics - Medium Breakdown
-
 ```sql
 SELECT
   medium,
