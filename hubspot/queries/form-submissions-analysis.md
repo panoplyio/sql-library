@@ -5,8 +5,6 @@ usage: This query can be used to create a bar chart that identifies the most com
 modifications: Remove the dimensions of the query to aggregate the metrics at a higher level. For instance, if one form can be submitted on multiple pages, removing the `page_url` and `page_title` dimensions would provide _form-level_ metrics only. Modify the `submission_timestamp` comparison in the `WHERE` clause to change the time frame of the analysis.
 ---
 
-# Hubspot - Form Submission Analysi
-s
 ```sql
 WITH form_submissions
 AS (

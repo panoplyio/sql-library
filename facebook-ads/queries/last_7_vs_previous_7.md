@@ -6,8 +6,6 @@ usage: This query can be used to create a bar chart comparing the `last_7` and `
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. Other dimensions and metrics can be added as filters to the `WHERE` or by adding a `HAVING` clause and other aggregations can be added on top of `last_7` and `previous_7`. This query sums the metric `clicks`, this can be changed to a different metric like `spend` or `impressions`.
 ---
 
-# Facebook Ads - Last 7 VS Previous 7
-
 ```sql
 SELECT
   campaign_name,
