@@ -1,5 +1,5 @@
 ---
-title: Zendesk & Salesforce: Ticket Count For Existing Customers
+title: Zendesk & Salesforce - Ticket Count For Existing Customers
 description: This query shows how many zendesk tickets per status a paying customer has. Paying customers are derived from Salesforce data and the ticket count is derived from the Zendesk data. User data from the two datasources are linked by email.
 requirements: Collect the `Lead` and `Opportunity` objects with the Panoply Salesforce data source and also the `Users`, `Organizations`, and `Tickets` Resources form the Zendesk data source.
 usage: This query can be displayed in a tabular or pivot form to display the ticket count per status.

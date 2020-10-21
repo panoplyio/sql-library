@@ -1,5 +1,5 @@
 ---
-title: Shopify: Customer Order Annual Overview
+title: Shopify - Customer Order Annual Overview
 description: This query shows an overview of a customer's orders by processing method, financial status, discount codes, and total discount derived from Shopify data.
 requirements: Collect the `Orders` Resource with the Panoply Shopify data source. This will create sub-tables for the `Customer` and `Discount Codes` data.
 usage: This query can be displayed in a tabular form to display the order pattern of the customer.

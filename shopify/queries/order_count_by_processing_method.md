@@ -1,5 +1,5 @@
 ---
-title: Shopify: Order Analytics by Processing Method
+title: Shopify - Order Analytics by Processing Method
 description: This query shows an overview of how many orders by financial status there are per processing method.
 requirements: Collect the `Orders` Resource with the Panoply Shopify data source.
 usage: This query can be displayed in a pivot form to display how many orders by financial status there are per processing method.
