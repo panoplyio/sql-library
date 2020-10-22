@@ -1,12 +1,10 @@
 ---
-title: Shopify: Order count by processing method for the Quarter-To-Date (QTD)
+title: Shopify - Order Analytics by Processing Method
 description: This query shows an overview of how many orders by financial status there are per processing method.
 requirements: Collect the `Orders` Resource with the Panoply Shopify data source.
 usage: This query can be displayed in a pivot form to display how many orders by financial status there are per processing method.
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Date Range Filter using the `created_at` in the `WHERE` clause can be changed.
 ---
-
-# Shopify: Order count by processing method for the Quarter-To-Date (QTD)
 
 ```sql
 SELECT

@@ -1,12 +1,10 @@
 ---
-title: Salesforce - Active Sales Rep lead-to-opportunity Conversion and Closed/Won Opportunities Rate for the Quarter-To-Date (QTD)
+title: Salesforce - Sales Rep Lead-to-Opportunity Conversion
 description: This query shows the conversion count and rate of lead-to-opportunity conversion and closed opportunities per active sales rep derived from Salesforce data.
 requirements: Collect the `User`, `Opportunity`, and `Lead` objects with the Panoply Salesforce data source
 usage: This query can be displayed in a tabular form to display the count and rate per active sales rep
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Date Range Filter using the `createddate` in the `WHERE` clause can be changed.
 ---
-
-# Salesforce - Active Sales Rep lead-to-opportunity Conversion and Closed/Won Opportunities Rate for the Quarter-To-Date (QTD)
 
 ```sql
 WITH active_user AS (

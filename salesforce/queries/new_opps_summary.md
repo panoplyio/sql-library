@@ -6,8 +6,6 @@ usage: This query can be displayed in a tabular form to display the current oppo
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Filters for `closedate, stagename, probability` in the `WHERE` clause can be changed or completely removed.
 ---
 
-# Salesforce - New Opportunities Summary
-
 ```sql
 SELECT
   sfu.name opp_owner,
