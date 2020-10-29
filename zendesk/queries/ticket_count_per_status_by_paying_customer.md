@@ -1,5 +1,5 @@
 ---
-title: Zendesk & Salesforce - Ticket Count For Existing Customers
+title: Ticket Count For Existing Customers
 description: This query shows how many zendesk tickets per status a paying customer has. Paying customers are derived from Salesforce data and the ticket count is derived from the Zendesk data. User data from the two datasources are linked by email.
 requirements: Collect the `Lead` and `Opportunity` objects with the Panoply Salesforce data source and also the `Users`, `Organizations`, and `Tickets` Resources form the Zendesk data source.
 usage: This query can be displayed in a tabular or pivot form to display the ticket count per status.
@@ -60,14 +60,14 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`name`| Name of Zendesk User
-`requester`| Zendesk Organization or the Zendesk User Email if organization is not set.
-`new`| Zendesk tickets count under the "new" status
-`open`| Zendesk tickets count under the "open" status
-`pending`| Zendesk tickets count under the "pending" status
-`hold`| Zendesk tickets count under the "hold" status
-`solved`| Zendesk tickets count under the "solved" status
-`closed`| Zendesk tickets count under the "closed" status
-`total`| Total tickets count
+| Column | Description |
+| --- | --- |
+| `name`| Name of Zendesk User |
+| `requester`| Zendesk Organization or the Zendesk User Email if organization is not set. |
+| `new`| Zendesk tickets count under the "new" status |
+| `open`| Zendesk tickets count under the "open" status |
+| `pending`| Zendesk tickets count under the "pending" status |
+| `hold`| Zendesk tickets count under the "hold" status |
+| `solved`| Zendesk tickets count under the "solved" status |
+| `closed`| Zendesk tickets count under the "closed" status |
+| `total`| Total tickets count |

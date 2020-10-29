@@ -1,5 +1,5 @@
 ---
-title: Salesforce - Sales Rep Lead-to-Opportunity Conversion
+title: Sales Rep Lead-to-Opportunity Conversion
 description: This query shows the conversion count and rate of lead-to-opportunity conversion and closed opportunities per active sales rep derived from Salesforce data.
 requirements: Collect the `User`, `Opportunity`, and `Lead` objects with the Panoply Salesforce data source
 usage: This query can be displayed in a tabular form to display the count and rate per active sales rep
@@ -51,12 +51,12 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`sales_rep`| Opportunity Owner (Sales Rep)
-`email`| Sales Rep Email
-`total_leads`| Total Leads Owned by the Sales Rep
-`converted_leads`| Total Leads Converted to Opportunity by the Sales Rep
-`won_leads`| Total Opportunities moved to the Closed/Won stage
-`conversion_rate`| Rate of conversion from Lead to Opportunity
-`win_rate`| Rate of opportunities being closed/won
+| Column | Description |
+| --- | --- |
+| `sales_rep`| Opportunity Owner (Sales Rep) |
+| `email`| Sales Rep Email |
+| `total_leads`| Total Leads Owned by the Sales Rep |
+| `converted_leads`| Total Leads Converted to Opportunity by the Sales Rep |
+| `won_leads`| Total Opportunities moved to the Closed/Won stage |
+| `conversion_rate`| Rate of conversion from Lead to Opportunity |
+| `win_rate`| Rate of opportunities being closed/won |

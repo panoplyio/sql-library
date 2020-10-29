@@ -1,5 +1,5 @@
 ---
-title: Hubspot - Form Submission Analysis
+title: Form Submission Analysis
 description: This query calculates metrics about form submissions and the context of the form submissions. This data is pulled from the [Hubspot API into Panoply](https://panoply.io/docs/data-sources/hubspot/).
 usage: This query can be used to create a bar chart that identifies the most commonly submitted Hubspot forms. Further modification could allow you to analyze the form submission over time, or the sequence of form submissions for each contact.
 modifications: Remove the dimensions of the query to aggregate the metrics at a higher level. For instance, if one form can be submitted on multiple pages, removing the `page_url` and `page_title` dimensions would provide _form-level_ metrics only. Modify the `submission_timestamp` comparison in the `WHERE` clause to change the time frame of the analysis.
@@ -37,14 +37,14 @@ GROUP BY 1,2,3,4,5;
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`form_id`| Hubspot's internal canonical form identifier, sometimes referred to as the `guid`
-`form_current_name`| Most recent name of the form in the Hubspot app (form names are mutable)
-`page_url`| The full URL the form was submitted on excluding protocol
-`page_title`| The title of the page where the form was submitted at the time of submission
-`form_title`| The name of the form at the time of submission
-`total_submissions`| Count of unique form submissions for each form, also referred to as "conversions"
-`total_contacts`| Count of unique contacts who submitted each form
-`first_submissions`| Count of times that this was a contacts' first form submission (often point of acquisition)
-`submission_per_contact`| Average number of submission per contact
+| Column | Description |
+| --- | --- |
+| `form_id`| Hubspot's internal canonical form identifier, sometimes referred to as the `guid` |
+| `form_current_name`| Most recent name of the form in the Hubspot app (form names are mutable) |
+| `page_url`| The full URL the form was submitted on excluding protocol |
+| `page_title`| The title of the page where the form was submitted at the time of submission |
+| `form_title`| The name of the form at the time of submission |
+| `total_submissions`| Count of unique form submissions for each form, also referred to as "conversions" |
+| `total_contacts`| Count of unique contacts who submitted each form |
+| `first_submissions`| Count of times that this was a contacts' first form submission (often point of | acquisition)
+| `submission_per_contact`| Average number of submission per contact |

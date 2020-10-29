@@ -1,5 +1,5 @@
 ---
-title: Facebook Ads - Last 7 VS Previous 7
+title: Last 7 Days VS Previous 7 Days
 description: This query compares the sessions of the last 7 days to the previous 7 days aggregated by `campaign_name`. This query demonstrates the use of a concept that can be used with any dimension and metric\\s, comparing different values of the metric based on different values of time or a given dimension.
 requirements: Collect data with the Panoply Facebook Ads data source.
 usage: This query can be used to create a bar chart comparing the `last_7` and `previous_7` for each campaign or simply displayed as a table.
@@ -29,8 +29,8 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`campaign_name`| Facebook Ads campaign name
-`last_7`| Values for last 7 days
-`previous_7`| Values for previous 7 days
+| Column | Description |
+| --- | --- |
+| `campaign_name`| Facebook Ads campaign name |
+| `last_7`| Values for last 7 days |
+| `previous_7`| Values for previous 7 days |

@@ -1,5 +1,5 @@
 ---
-title: Shopify - Customer Order Annual Overview
+title: Customer Order Annual Overview
 description: This query shows an overview of a customer's orders by processing method, financial status, discount codes, and total discount derived from Shopify data.
 requirements: Collect the `Orders` Resource with the Panoply Shopify data source. This will create sub-tables for the `Customer` and `Discount Codes` data.
 usage: This query can be displayed in a tabular form to display the order pattern of the customer.
@@ -46,23 +46,23 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`customer`| Customer's Full Name
-`email`| Customer's email
-`total_discounts`| total discount amount from all orders
-`discount_codes`| comma-separated list of all discount codes used
-`total_orders`| total order count
-`checkout`| Order Count under the processing method "checkout"
-`direct`| Order Count under the processing method "direct"
-`manual`| Order Count under the processing method "manual"
-`offsite`| Order Count under the processing method "offsite"
-`express`| Order Count under the processing method "express"
-`free`| Order Count with the financial status "free"
-`pending`| Order Count with the financial status "pending"
-`authorized`| Order Count with the financial status "authorized"
-`partially_paid`| Order Count with the financial status "partially_paid"
-`paid`| Order Count with the financial status "paid"
-`partially_refunded`| Order Count with the financial status "partially_refunded"
-`refunded`| Order Count with the financial status "refunded"
-`voided`| Order Count with the financial status "voided"
+| Column | Description |
+| --- | --- |
+| `customer`| Customer's Full Name |
+| `email`| Customer's email |
+| `total_discounts`| total discount amount from all orders |
+| `discount_codes`| comma-separated list of all discount codes used |
+| `total_orders`| total order count |
+| `checkout`| Order Count under the processing method "checkout" |
+| `direct`| Order Count under the processing method "direct" |
+| `manual`| Order Count under the processing method "manual" |
+| `offsite`| Order Count under the processing method "offsite" |
+| `express`| Order Count under the processing method "express" |
+| `free`| Order Count with the financial status "free" |
+| `pending`| Order Count with the financial status "pending" |
+| `authorized`| Order Count with the financial status "authorized" |
+| `partially_paid`| Order Count with the financial status "partially_paid" |
+| `paid`| Order Count with the financial status "paid" |
+| `partially_refunded`| Order Count with the financial status "partially_refunded" |
+| `refunded`| Order Count with the financial status "refunded" |
+| `voided`| Order Count with the financial status "voided" |

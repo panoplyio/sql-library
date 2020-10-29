@@ -1,5 +1,5 @@
 ---
-title: Hubspot - Elapsed time histogram From contact creation to MQL conversion
+title: Elapsed Time from Contact to MQL (Histogram)
 description: This query quantifies how long it takes for Hubspot contacts to become Marketing Qualified Leads. Contacts are grouped into bins based on the elapsed time from contact to MQL. ('Day 1', 'Day 2-7', 'Day 8-28' and 'Days 28+'). This data is pulled from the [Hubspot API into Panoply](panoply.io/docs/data-sources/hubspot/).
 usage: This query can be used to create histogram of time elapsed between the creation of a contact and their conversion to a marketing qualified lead. You can follow the [full tutorial here](blog.panoply.io/hubspot-lead-analytics-in-sql-beyond-crm-reporting).
 modifications: Change the bin size by altering BETWEEN integers (Ex. BETWEEN 1 AND 6) and the associated column names (in single quotes after THEN).
@@ -43,7 +43,7 @@ ORDER BY bins_days_diff
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`bins_days_diff`| Bin indicating the elapsed between contact creation and MQL conversion date.
-`count`| The number of Hubspot contacts that fall into the bins_days_diff groupings.
+| Column | Description |
+| --- | --- |
+| `bins_days_diff`| Bin indicating the elapsed between contact creation and MQL conversion date. |
+| `count`| The number of Hubspot contacts that fall into the bins_days_diff groupings. |

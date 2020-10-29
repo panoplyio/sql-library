@@ -1,5 +1,5 @@
 ---
-title: Shopify - Order Analytics by Processing Method
+title: Order Analytics by Processing Method
 description: This query shows an overview of how many orders by financial status there are per processing method.
 requirements: Collect the `Orders` Resource with the Panoply Shopify data source.
 usage: This query can be displayed in a pivot form to display how many orders by financial status there are per processing method.
@@ -28,13 +28,13 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`processing_method`| Processing methods used by the orders
-`pending`| Order Count with the financial status "pending"
-`authorized`| Order Count with the financial status "authorized"
-`partially_paid`| Order Count with the financial status "partially_paid"
-`paid`| Order Count with the financial status "paid"
-`partially_refunded`| Order Count with the financial status "partially_refunded"
-`refunded`| Order Count with the financial status "refunded"
-`voided`| Order Count with the financial status "voided"
+| Column | Description |
+| --- | --- |
+| `processing_method`| Processing methods used by the orders |
+| `pending`| Order Count with the financial status "pending" |
+| `authorized`| Order Count with the financial status "authorized" |
+| `partially_paid`| Order Count with the financial status "partially_paid" |
+| `paid`| Order Count with the financial status "paid" |
+| `partially_refunded`| Order Count with the financial status "partially_refunded" |
+| `refunded`| Order Count with the financial status "refunded" |
+| `voided`| Order Count with the financial status "voided" |

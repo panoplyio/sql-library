@@ -1,10 +1,9 @@
-# {Name of View}
-
-Instructions | Details
----|---
-Description | Brief summary transformation
-Usage | When and why to use this view
-Modifications | List ways this view could be modified for custom use
+---
+title: Short but Descriptive Title Without the Source Name
+description: Brief summary of the view
+usage: When and why to use this view
+modifications: List ways this view could be modified for custom use
+---
 
 ```sql
 -- CREATE VIEW view_name AS

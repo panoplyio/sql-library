@@ -1,5 +1,5 @@
 ---
-title: Salesforce - New Opportunities Summary
+| title: New Opportunities Summary |
 description: This query shows different details about opportunities derived from Salesforce data.
 requirements: Collect the `Opportunity`, `User`, `Account`, `Contact` and `Lead` objects with the Panoply Salesforce data source and create the view `salesforce_account_to_email`, more details [here](https://github.com/panoplyio/sql-library/blob/master/salesforce/views/account_to_email.md).
 usage: This query can be displayed in a tabular form to display the current opportunities.
@@ -33,14 +33,14 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`opp_owner`| Opportunity Owner (Sales Rep)
-`stage`| Opportunity Stage
-`probability`| Opportunity close probability
-`opp_name`| Opportunity Name
-`opp_email`| Opportunity Email
-`amount`| Deal Amount
-`next_step`| Next Step
-`close_date`| Close Date
-`created_date`| Created Date
+| Column | Description |
+| --- | --- |
+| `opp_owner`| Opportunity Owner (Sales Rep) |
+| `stage`| Opportunity Stage |
+| `probability`| Opportunity close probability |
+| `opp_name`| Opportunity Name |
+| `opp_email`| Opportunity Email |
+| `amount`| Deal Amount |
+| `next_step`| Next Step |
+| `close_date`| Close Date |
+| `created_date`| Created Date |
