@@ -1,5 +1,5 @@
 ---
-title: Salesforce - Account to Email
+title: Account to Email Mapping
 description: View for getting the connection between Salesforce `accountid` to the relevant user `email`.
 requirements: Collect the `Account`, `Contact` and `Lead` objects with the Panoply Salesforce data source.
 usage: This view can be used in many different salesforce reports for a quick connection between `accountid` and the relevant `email`.
@@ -31,11 +31,11 @@ FROM
 ```
 
 ## View Results Dictionary
-Column | Description
----|---
-`email`| Opportunity Email
-`accountid`| Salesforce Account ID
-`account_name`| Account Name
+| Column | Description |
+| --- | --- |
+| `email`| Opportunity Email |
+| `accountid`| Salesforce Account ID |
+| `account_name`| Account Name |
 
 ## Example: New Opportunities Summary
 [See Query Details Here](https://github.com/panoplyio/sql-library/blob/master/salesforce/queries/new_opps_summary.md)

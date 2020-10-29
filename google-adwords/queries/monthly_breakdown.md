@@ -1,5 +1,5 @@
 ---
-title: Google Adwords - Monthly Breakdown
+title: Monthly Performance Breakdown
 description: This query sums the total cost and conversions by month and year from the `adgroup_performance_report`.
 requirements: Collect the `Adgroup Performance Report` report with the Panoply Adwords API data source.
 usage: This query can be used to create a line or bar chart of cost and conversions over time.
@@ -24,12 +24,12 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`year_month`| Year and month extracted from the day column. Values are in date format with the first day of each month to represent that given month.
-`cost`| Total monthly cost in Dollars
-`conversions`| Total monthly conversions
-`clicks`| Total monthly clicks
-`impressions`| Total monthly impressions
-`clickthrough_rate`| Monthly clicks divided by monthly impressions
-`cost_per_click`| Total monthly cost divided by monthly clicks
+| Column | Description |
+| --- | --- |
+| `year_month`| Year and month extracted from the day column. Values are in date format with the first day of each month to represent that given month. |
+| `cost`| Total monthly cost in Dollars |
+| `conversions`| Total monthly conversions |
+| `clicks`| Total monthly clicks |
+| `impressions`| Total monthly impressions |
+| `clickthrough_rate`| Monthly clicks divided by monthly impressions |
+| `cost_per_click`| Total monthly cost divided by monthly clicks |

@@ -1,5 +1,5 @@
 ---
-title: Facebook Ads - Monthly Breakdown
+title: Monthly Performance Breakdown
 description: This query sums the total cost, clicks and impressions by month and year from `facebook-ads`.
 requirements: Collect data with the Panoply Facebook Ads data source.
 usage: This query can be used to create a line or bar chart of cost \ impressions \ clicks over time.
@@ -23,11 +23,11 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`year_month`| Year and month extracted from the date_start column. Values are in date format with the first day of each month to represent that given month.
-`cost`| Total monthly cost in the ad account's chosen currency
-`clicks`| Total monthly clicks
-`impressions`| Total monthly impressions
-`clickthrough_rate`| Monthly clicks divided by monthly impressions
-`cost_per_click`| Total monthly cost divided by monthly clicks
+| Column | Description |
+| --- | --- |
+| `year_month`| Year and month extracted from the date_start column. Values are in date format with the first day of each month to represent that given month. |
+| `cost`| Total monthly cost in the ad account's chosen currency |
+| `clicks`| Total monthly clicks |
+| `impressions`| Total monthly impressions |
+| `clickthrough_rate`| Monthly clicks divided by monthly impressions |
+| `cost_per_click`| Total monthly cost divided by monthly clicks |

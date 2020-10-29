@@ -1,5 +1,5 @@
 ---
-title: Salesforce - Sales Rep Ranked by Revenue for the Quarter-To-Date (QTD)
+title: Sales Rep Ranked by Revenue for the Quarter-To-Date (QTD)
 description: This query shows the active sales reps ranked by revenue. Amount is tallied from closed and won opportunities by the sales reps derived from Salesforce data.
 requirements: Collect the `User` and `Opportunity` objects with the Panoply Salesforce data source
 usage: This query can be displayed in a tabular or pivot form to display the revenue per active sales rep
@@ -35,8 +35,8 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`sales_rep`| Opportunity Owner (Sales Rep)
-`email`| Sales Rep Email
-`revenue`| Sum of amount from closed/won opportunities by sales rep.
+| Column | Description |
+| --- | --- |
+| `sales_rep`| Opportunity Owner (Sales Rep) |
+| `email`| Sales Rep Email |
+| `revenue`| Sum of amount from closed/won opportunities by sales rep. |

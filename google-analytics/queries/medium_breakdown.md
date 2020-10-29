@@ -1,5 +1,5 @@
 ---
-title: Google Analytics - Medium Breakdown
+title: Medium Performance Breakdown
 description: This displays a sessions and bounce rate from the past 30 days aggregated by medium.
 requirements: Collect the Panoply Google Analytics data source with the default set of metrics and dimensions. This query uses the `medium` and `datehour` dimensions and the `sessions` and `bounces` metrics
 usage: The result of this query can be displayed as a table or also as a bar chart.
@@ -22,8 +22,8 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-Column | Description
----|---
-`medium`| The type of referral
-`sum_sessions`| Sum of sessions
-`bounce_rate`| Sum of bounces divided by sum of sessions
+| Column | Description |
+| --- | --- |
+| `medium`| The type of referral |
+| `sum_sessions`| Sum of sessions |
+| `bounce_rate`| Sum of bounces divided by sum of sessions |
