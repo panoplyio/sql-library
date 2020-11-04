@@ -6,8 +6,6 @@ usage: This query can be displayed in a pivot form to display the total amount p
 modifications: The table in the `FROM` might need to be changed based on Schema and Destination settings in the data source. The Date Range Filter using the `closedate` in the `WHERE` clause can be changed. Everything below the UNION ALL clause can also be removed if you prefer to not have the total at the bottom.
 ---
 
-All revenue and loss for the Quarter-To-Date (QTD) grouped by type of opportunity.
-
 ```sql
 SELECT
   "type",
@@ -35,8 +33,8 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
-|Column | Description|
-|---|---|
-|`type`| Opportunity type|
-|`amount`| Sum of the opportunity amount|
-|`opps`| Opportunity count|
+| Column | Description |
+|--- | --- |
+| `type` | Opportunity type |
+| `amount` | Sum of the opportunity amount |
+| `opps` | Opportunity count |
