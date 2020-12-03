@@ -37,6 +37,7 @@ GROUP BY 1,2,3,4,5;
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `form_id`| Hubspot's internal canonical form identifier, sometimes referred to as the `guid` |

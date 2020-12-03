@@ -43,6 +43,7 @@ ORDER BY bins_days_diff
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `bins_days_diff`| Bin indicating the elapsed between contact creation and MQL conversion date. |

@@ -33,6 +33,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 |--- | --- |
 | `type` | Opportunity type |
