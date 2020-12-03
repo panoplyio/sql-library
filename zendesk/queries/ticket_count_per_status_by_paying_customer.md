@@ -60,6 +60,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `name`| Name of Zendesk User |

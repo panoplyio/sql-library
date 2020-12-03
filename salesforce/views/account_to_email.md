@@ -31,6 +31,7 @@ FROM
 ```
 
 ## View Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `email`| Opportunity Email |
@@ -38,4 +39,5 @@ FROM
 | `account_name`| Account Name |
 
 ## Example: New Opportunities Summary
+
 [See Query Details Here](https://github.com/panoplyio/sql-library/blob/master/salesforce/queries/new_opps_summary.md)

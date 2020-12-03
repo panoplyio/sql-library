@@ -23,6 +23,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `year_month`| Year and month extracted from the date_start column. Values are in date format with the first day of each month to represent that given month. |

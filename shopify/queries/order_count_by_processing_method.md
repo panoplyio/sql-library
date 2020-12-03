@@ -28,6 +28,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `processing_method`| Processing methods used by the orders |

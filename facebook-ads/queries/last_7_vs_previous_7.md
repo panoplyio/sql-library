@@ -29,6 +29,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `campaign_name`| Facebook Ads campaign name |

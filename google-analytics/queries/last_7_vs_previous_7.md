@@ -32,6 +32,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `day_of_week`| Day of the week extracted from datehour |

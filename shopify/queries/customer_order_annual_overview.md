@@ -46,6 +46,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `customer`| Customer's Full Name |

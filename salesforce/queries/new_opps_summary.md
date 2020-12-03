@@ -33,6 +33,7 @@ ORDER BY
 ```
 
 ## Query Results Dictionary
+
 | Column | Description |
 | --- | --- |
 | `opp_owner`| Opportunity Owner (Sales Rep) |
