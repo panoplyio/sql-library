@@ -20,5 +20,5 @@ ORDER BY 1, 2;
 | Column | Description |
 | --- | --- |
 | `Close Year`| Year of closing date. |
-| `Close Month"`| Month of closing date. |
-| `Pipeline - Forecasted Amount"`| The total forecasted revenue. |
+| `Close Month`| Month of closing date. |
+| `Pipeline - Forecasted Amount`| The total forecasted revenue. |
