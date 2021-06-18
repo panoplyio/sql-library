@@ -22,7 +22,7 @@ ORDER BY 1, 2;
 | Column | Description |
 | --- | --- |
 | `Close Year`| Year of closing date. |
-| `Close Month"`| Month of closing date. |
-| `Average Days to Close"`| The average amount of days to close a deal. |
-| `Average Days to Closed Won"`| The average amount of days to win a deal. |
-| `Average Days to Closed Lost"`| The average amount of days to lose a deal. |
+| `Close Month`| Month of closing date. |
+| `Average Days to Close`| The average amount of days to close a deal. |
+| `Average Days to Closed Won`| The average amount of days to win a deal. |
+| `Average Days to Closed Lost`| The average amount of days to lose a deal. |
