@@ -2,7 +2,6 @@
 title: Facebook Insights Outbound Clicks
 description: Focused version of the insights outbound clicks data
 usage: This is the "ready for analysis" view of Facebook Ads' insights outbound clicks information
-modifications: -
 ---
 
 ```sql

@@ -2,7 +2,6 @@
 title: Action Insights by Ad Format and Optimization Type
 description: This query aggregates actions metrics per the format and optimization type of each ad
 usage: This query can be used to create an histogram of multiple metrics for ads' formats and optimization types
-modifications: -
 ---
 
 ```sql

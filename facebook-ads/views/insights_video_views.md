@@ -2,7 +2,6 @@
 title: Facebook Insights Video Views
 description: Focused version of the insights video views data
 usage: This is the "ready for analysis" view of Facebook Ads' insights video views information
-modifications: -
 ---
 
 ```sql

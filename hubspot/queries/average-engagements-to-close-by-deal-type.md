@@ -2,7 +2,6 @@
 title: Average Engagements to Close by Deal Type
 description: This query calculates the average number of engagements for a closed deal per deal type.
 usage: This query can be used to create histogram of number of engagements in each deal type.
-modifications: -
 ---
 
 ```sql

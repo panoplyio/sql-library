@@ -2,7 +2,6 @@
 title: Expected Revenue by Hubspot Owner
 description: This query calculates the total forecasted revenue per Hubspot owner. It does not include deals that were either closed won or closed lost.
 usage: This query can be used to create histogram of sales representatives and their forecasted revenue.
-modifications: -
 ---
 
 ```sql

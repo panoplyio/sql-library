@@ -2,7 +2,6 @@
 title: Facebook Adsets Targeting Custom Audiences
 description: Focused version of the adsets targeting data for custom audiences only
 usage: This is the "ready for analysis" view of Facebook Ads' adsets targeting for custom audiences information
-modifications: -
 ---
 
 ```sql

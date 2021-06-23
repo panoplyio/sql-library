@@ -2,7 +2,6 @@
 title: Campaigns Metrics per Month
 description: This query aggregates multiple metrics per month for all the campaigns.
 usage: This query can be used to create line charts per metric or a high level overview of the Facebook Ads' campaigns per month.
-modifications: -
 ---
 
 ```sql
