@@ -2,7 +2,6 @@
 title: Facebook Adsets Targeting
 description: Focused version of the adsets targeting data
 usage: This is the "ready for analysis" view of Facebook Ads' adsets targeting information
-modifications: -
 ---
 
 ```sql

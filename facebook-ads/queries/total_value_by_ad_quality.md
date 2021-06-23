@@ -2,7 +2,6 @@
 title: Total Value by Ad Quality
 description: This query aggregates multiple metrics for each adset.
 usage: This query can be used to see main KPIs for adsets. The KPIs include but not limited to quality informaion, impressions, reach, spend, etc.
-modifications: -
 ---
 
 ```sql

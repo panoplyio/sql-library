@@ -2,7 +2,6 @@
 title: Deals Companies
 description: One to many connection table between all the companies to their respective deals
 usage: This view can be used in order to connect between a company and its deals
-modifications: -
 ---
 
 ```sql

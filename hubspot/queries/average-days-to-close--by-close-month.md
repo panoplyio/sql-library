@@ -2,7 +2,6 @@
 title: Average Days to Close by Close Month
 description: This query calculates the average number of days to close (total, won and lost deals) per month. It does not include deals that were either closed won or closed lost.
 usage: This query can be used to create a line or bar chart of average days to close (three different metrics) per month.
-modifications: -
 ---
 
 ```sql

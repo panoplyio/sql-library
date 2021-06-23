@@ -2,7 +2,6 @@
 title: Deals Contacts
 description: Many to many connection table between all the contacts to their respective deals
 usage: This view can be used in order to connect between a contact and its deals
-modifications: -
 ---
 
 ```sql

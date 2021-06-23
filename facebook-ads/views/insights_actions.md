@@ -2,7 +2,6 @@
 title: Facebook Insights Actions
 description: Focused version of the insights actions data
 usage: This is the "ready for analysis" view of Facebook Ads' insights actions information
-modifications: -
 ---
 
 ```sql
