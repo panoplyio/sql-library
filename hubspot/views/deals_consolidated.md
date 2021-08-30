@@ -69,7 +69,7 @@ INNER JOIN (
 		, MAX(CASE WHEN KEY = 'hs_analytics_source_data_1' THEN value END) AS source_data_1
 		, MAX(CASE WHEN KEY = 'hs_analytics_source_data_2' THEN value END) AS source_data_2
 		, MAX(CASE WHEN KEY = 'lead_source' THEN value END) AS lead_source
-		, MAX(CASE WHEN KEY = 'lod' THEN value END) AS lod -- unsure what this is
+		, MAX(CASE WHEN KEY = 'lod' THEN value END) AS lod
 		-- Numbers
 		, MAX(CASE WHEN KEY = 'num_associated_contacts' THEN value END) AS num_associated_contacts
 		, MAX(CASE WHEN KEY = 'num_contacted_notes' THEN value END) AS num_contacted_notes
